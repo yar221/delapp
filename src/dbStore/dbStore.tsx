@@ -9,7 +9,7 @@ class DBStore{
             // localStorage.setItem('user', JSON.stringify(response.data.user))
             return response.data
         } catch (e: any) {
-            alert(e.response.data.message)
+            alert(e.message)
         }
     }
 
@@ -20,7 +20,7 @@ class DBStore{
             // localStorage.setItem('user', JSON.stringify(response.data.user))
             return response.data
         } catch (e: any) {
-            alert(e.response.data.message)
+            alert(e.message)
         }
     }
 

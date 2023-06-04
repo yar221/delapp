@@ -1,0 +1,103 @@
+.product {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &__item {
+            padding: 7px 12px;
+            border: 1.5px solid #6c757d;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+            margin: 10px;
+            transition: all .3s;
+      }
+
+      .item {
+            &__img {
+                  width: 75px;
+                  margin-bottom: 15px;
+            }
+
+            &:hover {
+                  border: 1.5px solid #e83e8c;
+                  color: #e83e8c;
+            }
+
+            &__name {
+                  margin-bottom: 7px;
+            }
+
+            &__price {
+                  margin-bottom: 7px;
+
+            }
+
+            &__button {
+                  cursor: pointer;
+                  background-color: #4CAF50;
+                  color: white;
+                  border: none;
+                  padding: 10px 20px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin-top: 10px;
+                  cursor: pointer;
+                  transition: background-color 0.5s ease;
+                  border-radius: 8px;
+
+                  &:hover {
+                        background-color: #348738;
+                  }
+            }
+      }
+}
+
+$spinner: salmon;
+$background: white;
+$size: 30px;
+
+html { background-color: $background; }
+
+.spinner {
+  position: absolute;
+  top: calc(50% - #{$size / 2});
+  left: calc(50% - #{$size / 2});
+  width: $size;
+  height: $size;
+  animation: spinner 0.75s linear infinite;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .spinner-inner-1 {
+    background: linear-gradient(to right, rgba($spinner,0) 0%,rgba($spinner,0) 50%,$spinner 51%);
+  }
+  
+  .spinner-inner-2 {
+    background: linear-gradient(to top, rgba($background,0) 0%,$background 100%);
+  }
+  
+  .spinner-inner-3 {
+    $offset: $size * 0.1;
+    top: $offset;
+    left: $offset;
+    width: $size - ($offset * 2);
+    height: $size - ($offset * 2);
+    background: $background;
+  }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

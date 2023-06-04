@@ -1,0 +1,104 @@
+.shop-cart {
+      max-width: 500px;
+      background-color: #f8f9fa;
+      margin: 0 auto;
+      margin-top: 25px;
+      height: 550px;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+            font-size: 24px;
+            font-weight: 500;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            background-color: #706e6e;
+            border-radius: 15px 15px 0 0;
+      }
+
+      .list {
+            &__item {
+                  display: flex;
+                  align-items: center;
+                  // justify
+            }
+
+            .item {
+                  &__img {
+                        width: 60px;
+                        margin-right: 5px;
+                  }
+
+                  &__title {
+                        margin-right: 10px;
+                  }
+
+                  &__price {
+                        margin-right: 10px;
+                        text-align: center;
+                  }
+
+                  &__count {
+                        border: 1px solid #ccc;
+                        padding-left: 5px;
+                        border-radius: 5px;
+                        max-width: 50px;
+                  }
+
+                  &__delete {
+                        margin-left: auto;
+                        background-color: inherit;
+                        cursor: pointer;
+                  }
+            }
+      }
+
+      &__list {
+            padding: 10px 15px;
+            margin-bottom: auto;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: #888888 #f0f0f0;
+
+            &::-webkit-scrollbar {
+                  width: 8px;
+                }
+              
+                &::-webkit-scrollbar-track {
+                  background-color: #f0f0f0;
+                }
+              
+                &::-webkit-scrollbar-thumb {
+                  background-color: #888888;
+                  border-radius: 4px;
+              
+                  &:hover {
+                    background-color: #555555;
+                  }
+                }
+
+            @media (max-width: 365px) {
+                  font-size: 12px;
+            }
+      }
+
+      .total {
+            &__text {
+                  margin-right: 5px;
+            }
+      }
+
+      &__total {
+            background-color: #706e6e;
+            display: flex;
+            padding: 15px 0;
+            border-radius: 0 0 15px 15px;
+            padding-left: 10px;
+            font-size: 24px;
+            font-weight: 500;
+      }
+}
+

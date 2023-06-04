@@ -1,0 +1,32 @@
+.shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    &__item{
+        padding: 7px 12px;
+        border: 1.5px solid #6c757d;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        margin: 10px;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    .item{
+        &__img{
+            width: 75px;
+            margin-bottom: 15px;
+        }
+
+        &:hover{
+            border: 1.5px solid #e83e8c ;
+            color: #e83e8c;
+        }
+    }
+}
+  
